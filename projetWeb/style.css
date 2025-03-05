@@ -14,14 +14,29 @@ body {
 	margin: 0;
 }
 
-/* sélecteur de classe . */
-.cv-header {
-	background-color: grey;
-}
-
 /* sélecteur d'id # */
 #title1 {
 	text-transform: uppercase; /* texte en majuscule */
+}
+
+header,
+footer {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	background-color: lightgrey;
+}
+
+.space-between {
+	display: flex;
+	justify-content: space-between; /* axe principal */
+	align-items: center; /* axe secondaire */
+}
+
+.link-list {
+	list-style: none; /* aucune puce */
+	padding-left: 0; /* aucune marge interne */
+	display: flex; /* met ses enfants en ligne */
+	gap: 30px; /* écart entre les enfants */
 }
 
 /* sélecteur de classe . */
@@ -34,5 +49,11 @@ body {
 
 .container {
 	max-width: 960px;
-	margin: auto;
+	margin: auto; /* centrer horizontalement */
+}
+
+.banner {
+	height: 120px;
+	background-image: url("images/pattern.jpg");
+	background-size: cover; /* image recouvre le bloc sans être déformée */
 }
