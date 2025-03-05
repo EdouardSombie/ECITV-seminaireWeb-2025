@@ -1,0 +1,27 @@
+/* 
+selecteur{
+    property : value;
+} 
+*/
+
+/* sélecteur de balise */
+body {
+	color: #333;
+	margin: 0;
+}
+
+/* sélecteur de classe . */
+.cv-header {
+	background-color: grey;
+	img {
+		width: 100px;
+		aspect-ratio: 1/1;
+		object-fit: cover;
+		border-radius: 100%;
+	}
+}
+
+/* sélecteur d'id # */
+#title1 {
+	text-transform: uppercase; /* texte en majuscule */
+}
