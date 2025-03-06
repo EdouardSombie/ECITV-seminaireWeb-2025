@@ -9,7 +9,7 @@ selecteur{
 
 html {
 	scroll-behavior: smooth; /* le scroll de la page se fait en douceur */
-	scroll-padding: 180px; /* la hauteur de notre headr sticky */
+	scroll-padding: 226px; /* la hauteur de notre header sticky */
 }
 
 a {
