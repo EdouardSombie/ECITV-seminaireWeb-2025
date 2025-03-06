@@ -14,7 +14,7 @@
 			<!-- balise bloc (indéterminé) -->
 			<div class="container">
 				<div class="space-between">
-					<h1>Chihiro Ogino</h1>
+					<a href="#" class="no-style"><h1>Chihiro Ogino</h1></a>
 					<!-- balise image (autofermante) -->
 					<img src="images/image1.jpg" alt="Mon profil" class="avatar" />
 				</div>
@@ -25,13 +25,17 @@
 						<!-- balise ligne -->
 						<li>
 							<!-- balise hyperlien -->
-							<a href="#">Diplômes</a>
+							<a href="#about">A propos</a>
 						</li>
 						<li>
-							<a href="#">Expérience professionnelle</a>
+							<!-- balise hyperlien -->
+							<a href="#diplomes">Diplômes</a>
 						</li>
 						<li>
-							<a href="#">Hobbies</a>
+							<a href="#expepro">Expérience professionnelle</a>
+						</li>
+						<li>
+							<a href="#hobbies">Hobbies</a>
 						</li>
 					</ul>
 				</nav>
@@ -39,36 +43,53 @@
 		</header>
 		<main>
 			<div class="banner"></div>
-			<div class="container">
-				<section>
+			<section id="about" class="section0">
+				<div class="container">
+					<h1>A propos de moi</h1>
+					<p>
+						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet quisquam alias molestiae cumque reprehenderit iure labore totam illum velit vitae, provident soluta reiciendis laborum saepe.
+						Rem quasi numquam necessitatibus reprehenderit!
+					</p>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quam iure tempora minima ratione quis porro quas! Ab recusandae adipisci non explicabo cum dolore alias eos repudiandae
+						voluptate, provident veritatis?
+					</p>
+				</div>
+			</section>
+			<section id="diplomes" class="section1">
+				<div class="container">
 					<!-- Titre de niveau 1 -->
-					<h1 id="title1">Diplômes</h1>
+					<h1>Diplômes</h1>
 					<ul>
 						<li>2024 - Diplome 3</li>
 						<li>2022 - Diplome 2</li>
 						<li>2020 - Diplome 1</li>
 					</ul>
-				</section>
-				<section>
-					<h1>Expérience professionnelle</h1>
+				</div>
+			</section>
+			<section id="expepro" class="section2">
+				<div class="container">
+					<h1 id="expepro">Expérience professionnelle</h1>
 					<ul>
 						<li>Depuis 2020 - emploi 2</li>
 						<li>2018 / 2020 - emploi 1</li>
 					</ul>
-				</section>
-				<section>
+				</div>
+			</section>
+			<section id="hobbies" class="section3">
+				<div class="container">
 					<h1>Hobbies</h1>
 					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate magni nam earum possimus voluptas. Iusto, veritatis. Qui similique expedita itaque exercitationem numquam! Natus corrupti
-						ab accusamus voluptatem velit reprehenderit earum?
+						<a href="#">Lorem ipsum dolor sit</a> amet consectetur adipisicing elit. Voluptate magni nam earum possimus voluptas. Iusto, veritatis. Qui similique expedita itaque exercitationem
+						numquam! Natus corrupti ab accusamus voluptatem velit reprehenderit earum?
 					</p>
 					<ul>
 						<li>Javascript et web temps réel</li>
 						<li>Basket ball</li>
 						<li>La cuisine chinoise</li>
 					</ul>
-				</section>
-			</div>
+				</div>
+			</section>
 		</main>
 		<footer>
 			<div class="container">

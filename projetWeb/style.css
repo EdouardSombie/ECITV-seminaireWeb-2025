@@ -7,9 +7,18 @@ selecteur{
 } 
 */
 
+html {
+	scroll-behavior: smooth; /* le scroll de la page se fait en douceur */
+	scroll-padding: 180px; /* la hauteur de notre headr sticky */
+}
+
+a {
+	color: inherit;
+}
+
 /* sélecteur de balise */
 body {
-	color: #333;
+	color: #262626;
 	font-family: "Poppins", serif;
 	margin: 0;
 }
@@ -21,9 +30,21 @@ body {
 
 header,
 footer {
-	padding-top: 30px;
-	padding-bottom: 30px;
-	background-color: lightgrey;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: rgb(230, 230, 230);
+}
+
+header {
+	position: sticky; /* ne sort pas de l'écran, reste collé en haut */
+	top: 0;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* ombre portée noire à 30% d'opacité */
+	z-index: 1; /* pour s'assurer que rien ne passe au dessus */
+}
+
+.no-style {
+	text-decoration: none;
+	color: inherit; /* utilise la couleur de texte du parent */
 }
 
 .space-between {
@@ -36,24 +57,111 @@ footer {
 	list-style: none; /* aucune puce */
 	padding-left: 0; /* aucune marge interne */
 	display: flex; /* met ses enfants en ligne */
-	gap: 30px; /* écart entre les enfants */
+	gap: 15px; /* écart entre les enfants */
+	margin-bottom: 0;
+}
+
+/* balise a présente dans une balise nav */
+nav a {
+	text-decoration: none; /* soulignement */
+	background-color: #262626;
+	color: white;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	display: block; /* affichage en rectangle */
+	transition: all 0.3s;
+	border-radius: 4px;
+}
+
+/* balise a présente dans une balise nav AU SURVOL */
+nav a:hover {
+	background-color: white;
+	color: #262626;
 }
 
 /* sélecteur de classe . */
 .avatar {
-	width: 100px;
-	height: 100px;
+	width: 120px;
+	height: 120px;
 	object-fit: cover;
 	border-radius: 100%; /* marche parce que le bloc est carré */
+	border: solid 8px #20a0ab;
 }
 
 .container {
 	max-width: 960px;
 	margin: auto; /* centrer horizontalement */
+	padding-left: 30px;
+	padding-right: 30px;
 }
 
 .banner {
-	height: 120px;
-	background-image: url("images/pattern.jpg");
+	height: 240px;
+	background-image: url("images/pattern.gif");
 	background-size: cover; /* image recouvre le bloc sans être déformée */
+	background-attachment: fixed; /* effet de parallaxe */
+	transition: all 0.3s;
+}
+
+.banner:hover {
+	filter: invert(100%);
+}
+
+.section0 {
+	background-color: #262626;
+	color: white;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.section1 {
+	background-color: #eb4240;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	color: white;
+}
+
+.section2 {
+	background-color: #262626;
+	color: white;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.section3 {
+	background-color: #2aa0aa;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	color: white;
+}
+
+/* styles mobiles */
+@media (width < 760px) {
+	html {
+		scroll-padding: 0; /* scroll jusqu'en haut de la page */
+	}
+
+	header {
+		position: static; /* se positionne par défaut */
+		padding-top: 50px;
+	}
+
+	nav a {
+		text-align: center;
+	}
+
+	.space-between {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.avatar {
+		order: -1;
+	}
+
+	.link-list {
+		flex-direction: column;
+	}
 }
